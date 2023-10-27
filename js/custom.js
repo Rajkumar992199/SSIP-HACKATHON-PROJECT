@@ -1,5 +1,5 @@
 
-alert('Welcome to CarrierCruise Page');
+alert('Welcome to CareerCruise Platform');
 
 // to get current year
 function getYear() {
