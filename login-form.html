@@ -1,42 +1,22 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
+<html lang="en">
 
 <head>
-    <meta charset="utf-8">
-    <title>Login Form</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./login-form.css">
+    <title>Career Cruise - Login</title>
 </head>
 
 <body>
-    <div class="wrapper">
-        <div class="title">
-            Login Form
-        </div>
-        <form action="#">
-            <div class="field">
-                <input type="text" required>
-                <label>Email Address</label>
-            </div>
-            <div class="field">
-                <input type="password" required>
-                <label>Password</label>
-            </div>
-            <div class="content">
-                <div class="checkbox">
-                    <input type="checkbox" id="remember-me">
-                    <label for="remember-me">Remember me</label>
-                </div>
-                <div class="pass-link">
-                    <a href="#">Forgot password?</a>
-                </div>
-            </div>
-            <div class="field">
-                <input type="submit" value="Login">
-            </div>
-            <div class="signup-link">
-                Not a member? <a href="./sign-up.html">Signup now</a>
-            </div>
+    <div class="container">
+        <h1>Login</h1>
+        <form action="/login" method="post">
+            <input type="text" name="email" id="email" placeholder="Enter your Email ID"><br>
+            <input type="password" name="password" id="password" placeholder="Enter your password"><br>
+            <button type="submit">Login</button>
         </form>
+        <a href="./sign-up.html">New User? Signup here.</a>
     </div>
 </body>
 

@@ -1,56 +1,39 @@
 <!DOCTYPE html>
-<html lang="en">
-<header>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="./survey-form.css" />
-    <title>| Survey Form |</title>
-</header>
+<html>
+
+<head>
+    <title>Job Portal Survey</title>
+    <link rel="stylesheet" href="./survey-form.css">
+</head>
 
 <body>
-    <h1><center><b>&#10145; Fill this form</b></center></h1>
-    <section class="formcarry-container">
-        <form action="#" method="POST" enctype="multipart/form-data">
-
-            <div class="formcarry-block">
-                <label for="fc-generated-1-name">Full Name*</label>
-                <input type="text" name="name" id="fc-generated-1-name" placeholder="Your first and last name" />
+    <div class="container">
+        <h1>Job Portal Survey</h1>
+        <form>
+            <div class="form-group">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
             </div>
-
-            <div class="formcarry-block">
-                <label for="fc-generated-1-email">Your Email Address*</label>
-                <input type="email" name="email" id="fc-generated-1-email" placeholder="john@domain.com" />
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
             </div>
-
-            <div class="formcarry-block">
-                <label for="fc-generated-1-telephone">Your Phone Number*</label>
-                <input type="tel" name="telephone" id="fc-generated-1-telephone" placeholder="+91 9454XXXXXX" />
-            </div>
-
-            <div class="formcarry-block">
-                <label for="fc-generated-1-people">Are you satisfied with the service provided?</label>
-                <select name="people" id="fc-generated-1-people">
-                    <option value="" selected disabled>Please select..</option>
-                    <option value="Strongly Agree">Strongly Agree</option>
-                    <option value="Agree">Agree</option>
-                    <option value="Neutral">Neutral</option>
-                    <option value="Disagree">Disagree</option>
-                    <option value="Strongly Disagree">Strongly Disagree</option>
+            <div class="form-group">
+                <label for="experience">Years of Experience:</label>
+                <select id="experience" name="experience">
+                    <option value="0-2">0-2</option>
+                    <option value="3-5">3-5</option>
+                    <option value="6-10">6-10</option>
+                    <option value="10+">10+</option>
                 </select>
             </div>
-
-            <div class="formcarry-block">
-                <label for="fc-generated-1-additionalFeedback">Additional comments</label>
-                <textarea name="message" name="additionalFeedback" id="fc-generated-1-additionalFeedback"
-                    placeholder="Enter your message..."></textarea>
+            <div class="form-group">
+                <label for="comments">Additional Comments:</label>
+                <textarea id="comments" name="comments" rows="4"></textarea>
             </div>
-
-            <div class="formcarry-block">
-                <button type="submit">Send</button>
-            </div>
-
+            <button type="submit">Submit</button>
         </form>
-    </section>
+    </div>
 </body>
 
 </html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./jobApplication.css" />
+    <title>Apply for Jobs</title>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Job Application</h1>
+        <form action="/application" method="post">
+            <input type="text" name="name" id="name" placeholder="Enter your full name" /><br />
+            <input type="number" name="age" id="age" placeholder="Enter your age" /><br />
+            <input type="text" name="qualification" id="qualification" placeholder="Enter your qualification" /><br />
+            <div class="docs">
+                <label for="degree" class="labels">Upload your Degree</label><br />
+                <input type="file" name="degree" id="degree" placeholder="Upload your degree" /><br />
+            </div>
+            <div class="docs">
+                <label for="resume" class="labels">Upload your Resume</label><br />
+                <input type="file" name="resume" id="resume" placeholder="Upload your resume" /><br />
+            </div>
+            <button type="submit" onclick="showApplicationStatus()">Apply</button>
+        </form>
+        <div id="stat">
+            <div id="status"></div>
+            <div id="link"><a href="../index.html">Go to Home</a></div>
+        </div>
+    </div>
+    <!-- <script src="../js/custom.js"></script> -->
+    <script>
+        // setTimeout(showStatus,1000)
+        function showApplicationStatus() {
+            fetch("/api")
+                .then((appStat) => {
+                    return appStat.json();
+                })
+                .then((Stat) => {
+                    // console.log(deposit)
+                    // document.getElementsByClassName("name")[0].innerText = deposit.holdername
+                    // document.getElementsByClassName("balance")[0].innerText = deposit.accbalance
+                    // document.getElementById("link").innerHTML = Stat.link;
+                    // alert(Stat.status);
+                });
+
+            alert('Your application has been received')
+        }
+    </script>
+</body>
+
+</html>

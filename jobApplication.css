@@ -1,11 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Bungee+Spice&family=Poppins&display=swap');
 
-
-
 * {
     margin: 0;
     padding: 0;
-    background-color: rgba(45, 0, 100, 0.9);
+    background-color: rgba(8, 19, 92, 0.9);
     font-family: 'Poppins', sans-serif;
     color: white;
 }
@@ -60,4 +58,14 @@ a {
 a:hover {
     color: white;
     transition: 0.5s
+}
+
+.docs {
+    margin-top: 10px !important;
+}
+
+#status,
+#link {
+    text-align: center;
+    margin-top: 1rem;
 }

@@ -3,34 +3,29 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./sign-up.css">
-    <title>Sign Up Page</title>
+    <title>Career Cruise - Signup</title>
 </head>
 
 <body>
-    <div class="wrapper">
-        <form action="">
-            <h1>Sign up</h1>
-            <div class="input">
-                <input type="text" placeholder="Full Name" required>
-            </div>
-            <div class="input">
-                <input type="text" placeholder="Username" required>
-            </div>
-            <div class="input">
-                <input type="text" placeholder="Email" required>
-            </div>
-            <div class="input">
-                <input type="password" placeholder="Password" required>
-            </div>
-            <button type="submit" class="btn">Sign up</button>
-            <p> Already have an account?
-                <a href="./login-form.html">Login</a>
-            </p>
+    <div class="container">
+        <h1>Signup</h1>
+        <form action="/signup" method="post">
+            <input type="text" name="email" id="email" placeholder="Enter your Email ID"><br>
+            <input type="password" name="password" id="password" placeholder="Enter your password"><br>
+            <button type="submit">Signup</button>
         </form>
+        <a href="./login-form.html">Already A User? Login here.</a>
     </div>
+
+    <script>
+        fetch('/api/signup').then((appStat) => {
+            return appStat.json()
+        }).then((Stat) => {
+            // alert(Stat.status)
+        })
+    </script>
 </body>
 
 </html>
